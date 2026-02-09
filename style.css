@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+}
+
+/* HEADER */
+.topbar {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to right, #ffcc00, #ff9900);
+  color: black;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.topbar p {
+  margin: 5px 0 0;
+  font-weight: bold;
+}
+
+/* UBICACIÓN */
+.location-box {
+  text-align: center;
+  padding: 25px;
+}
+
+.btn-primary {
+  background: #ffcc00;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#locationText {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* MENÚ */
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 18px;
+  padding: 20px;
+}
+
+.card {
+  background: #1c1c1c;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.2);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+}
+
+.card p {
+  margin: 0;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.card button {
+  margin: 12px;
+  padding: 10px;
+  width: 80%;
+  border: none;
+  border-radius: 12px;
+  background: #ffcc00;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* CARRITO */
+.cart {
+  background: #1a1a1a;
+  padding: 20px;
+  border-top: 2px solid #ffcc00;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart li {
+  margin: 8px 0;
+}
+
+.btn-whatsapp {
+  width: 100%;
+  padding: 14px;
+  background: #25d366;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-clear {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #ff4444;
+  border: none;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}

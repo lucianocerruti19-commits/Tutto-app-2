@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ff2d2d"> 
+
+  <title>Tutto per Tutti | Premium Menu</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="topbar">
+    <h1>🍔 Tutto per Tutti</h1>
+    <p>Premium Burgers & Pizzas</p>
+  </header>
+
+  <!-- UBICACIÓN -->
+  <section class="location-box">
+    <h2>📍 Bienvenido</h2>
+    <p>Pedí rápido, fácil y con estilo premium.</p>
+
+    <button class="btn-primary" onclick="getLocation()">
+      Usar mi ubicación
+    </button>
+
+    <p id="locationText">Ubicación no seleccionada</p>
+  </section>
+
+  <!-- MENÚ -->
+  <main class="menu">
+
+    <h2 class="section-title">Nuestro Menú</h2>
+
+    <div class="cards">
+
+      <!-- Hamburguesa -->
+      <div class="card">
+        <img src="images/burger1.jpg" alt="Hamburguesa">
+        <h3>Big Tutto Burger</h3>
+        <p>$4500</p>
+        <button onclick="addToCart('Big Tutto Burger', 4500)">
+          Agregar +
+        </button>
+      </div>
+
+      <!-- Hamburguesa 2 -->
+      <div class="card">
+        <img src="images/burger2.jpg" alt="Hamburguesa">
+        <h3>Cheese Premium</h3>
+        <p>$5000</p>
+        <button onclick="addToCart('Cheese Premium', 5000)">
+          Agregar +
+        </button>
+      </div>
+
+      <!-- Pizza -->
+      <div class="card">
+        <img src="images/pizza1.jpg" alt="Pizza">
+        <h3>Pizza Napolitana</h3>
+        <p>$6000</p>
+        <button onclick="addToCart('Pizza Napolitana', 6000)">
+          Agregar +
+        </button>
+      </div>
+
+      <!-- Pizza 2 -->
+      <div class="card">
+        <img src="images/pizza2.jpg" alt="Pizza">
+        <h3>Pizza Pepperoni</h3>
+        <p>$6500</p>
+        <button onclick="addToCart('Pizza Pepperoni', 6500)">
+          Agregar +
+        </button>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- CARRITO -->
+  <section class="cart">
+    <h2>🛒 Tu Pedido</h2>
+    <ul id="cartItems"></ul>
+
+    <h3>Total: $<span id="totalPrice">0</span></h3>
+
+    <button class="btn-whatsapp" onclick="sendWhatsApp()">
+      Enviar Pedido por WhatsApp
+    </button>
+
+    <button class="btn-clear" onclick="clearCart()">
+      Vaciar Carrito
+    </button>
+  </section>
+
+  <script src="script.js"></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./service-worker.js")
+        .then(() => console.log("App instalada correctamente"))
+        .catch((err) => console.log("Error SW:", err));
+    }
+  </script>
+</body>
+</html>
